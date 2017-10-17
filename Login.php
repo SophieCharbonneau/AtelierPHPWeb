@@ -7,7 +7,7 @@
         <br>
         <a href="NewFilm.php" > Nouveau film</a>
         <br><br>
-
+        <form method="post" action="loginpost.php">
         <label>Login</label> 
         <input name="Log" type="text"</input>
         <br>
@@ -15,7 +15,7 @@
         <input name="Psd" type="password"</input>
         <br>
         <input type="submit" values="Connexion"</input>
-        
+        </form>
     </body>
 
 </html>
