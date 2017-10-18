@@ -1,10 +1,16 @@
 <?php
 
-include "./LIB/db.php";
+include_once "./LIB/db.php";
 
 var_dump($_REQUEST);
 $id = $_REQUEST["id"];
 
 dbSupprimerFilm($id);
 
-echo "supp effectué";
+//redirection de page
+
+header("Location: ListeFilm.php");
+//
+
+
+?>
