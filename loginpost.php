@@ -2,14 +2,23 @@
 <?php
 
 
+include_once "./LIB/db.php";
+session_start();
+
+
+var_dump($_REQUEST);
+$utils = dbRechercheUtilParLoginMdp($_REQUEST["login"], $_REQUEST["mdp"]);
+$login = $_REQUEST["login"];
 
 
 
-if ($_REQUEST["Log"]==="admin" and $_REQUEST["Psd"]=== "admin")
-{
-    echo "connexion réussie";
+if (count($utils)> 0 ){
+
+    $_SESSION["loginUtilConnecte"] = $login;
+    header("location: listefilm.php");
+    exit;
 }
 else {
         
-    echo "connexion échouée";
+    session_destroy();
     }

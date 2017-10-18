@@ -10,6 +10,7 @@ $films = dblisterfilm()
         <title></title>
     </head>
     <body>
+          <?php include './menu.php';?>
         <form action="suppfilm.php" method="post"
         <h1>Liste de Films</h1> 
 

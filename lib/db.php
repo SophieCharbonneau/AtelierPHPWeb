@@ -3,6 +3,12 @@
 define("DB_CHAINE_CONNEXION", "mysql:host=localhost;dbname=streaming");
 define("DB_USER", "root");
 
+function dbRechercheUtilParLoginMdp( $login, $mdp ) {
+      $pdo = dbConnexion();
+      return $pdo->query("SELECT * FROM util where login='$login' and mdp='$mdp'" )->fetchAll();
+      
+     
+}
 
 function dblisterfilm(){
     $pdo = dbConnexion();

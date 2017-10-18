@@ -2,9 +2,7 @@
 <html>
     <body>
         <h1> Nouveau Film</h1>
-        <a href="login.php" > Login</a>
-        <br>
-        <a href="NewFilm.php" > Nouveau film</a>
+           <?php include './menu.php';?>
         <br><br>
         <form action="ajoutfilm.php" method="post"
             <label>Titre du film</label> 

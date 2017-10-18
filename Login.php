@@ -2,17 +2,14 @@
 
 <html>
     <body>
-        <h1> Menu</h1>
-        <a href="login.php" > Login</a>
-        <br>
-        <a href="NewFilm.php" > Nouveau film</a>
+        <?php include './menu.php';?>
         <br><br>
         <form method="post" action="loginpost.php">
             <label>Login</label> 
-            <input name="Log" type="text"</input>
+            <input name="login" type="text"</input>
             <br>
             <label>Password</label> 
-            <input name="Psd" type="password"</input>
+            <input name="mdp" type="password"</input>
             <br>
             <input type="submit" values="Connexion"</input>
         </form>
