@@ -1,13 +1,17 @@
 <?php
+
+
 session_start();
 echo @$_SESSION ["loginUtilConnecte"];
 
 
-
-
-?>
-<a href="Login.php" > Connexion</a><br>
+if ( isset($_SESSION["loginUtilConnecte"])) : ?>
 <a href="Logout.php" > Deconnexion</a><br>
+ <?php else : ?>
+
+<a href="Login.php" > Connexion</a><br>
+<?php endif; ?>
+
 <a href="ListeFilm.php" > Liste des films</a><br>
 <a href="NewFilm.php" > Nouveau film</a>
         
